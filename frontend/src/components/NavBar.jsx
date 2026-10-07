@@ -14,7 +14,7 @@ const NavBar = () => {
 
       {/* Desktop Nav Links */}
       <ul className="hidden md:flex gap-5 lg:gap-8 text-sm text-black px-5">
-        {["HOME", "ABOUT", "COLLECTION", "CONTACT"].map((item, index) => (
+        {["HOME", "COLLECTION", "ABOUT", "CONTACT"].map((item, index) => (
           <NavLink
             key={index}
             className="group flex flex-col items-center gap-1"

@@ -31,7 +31,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center mt-10 mb-10 border-t border-gray-300 pt-5">
+      <div className="text-center mt-10 mb-10 border-t  pt-5">
         <p>Copyright 2024@ forever.com - All Right Reserved.</p>
       </div>
     </div>

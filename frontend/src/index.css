@@ -10,4 +10,11 @@
   body {
     font-family: "Outfit", sans-serif;
   }
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
