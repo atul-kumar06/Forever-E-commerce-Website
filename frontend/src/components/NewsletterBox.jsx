@@ -10,7 +10,7 @@ const NewsletterBox = () => {
       </p>
       <form
         action=""
-        className="w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border pl-3"
+        className="w-full sm:w-1/2 flex items-center gap-3 mx-auto my-6 border border-gray-300 pl-3"
         onSubmit={onSubmitHandler}
       >
         <input
