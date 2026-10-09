@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import { products } from "../assets/frontend_assets/assets";
 
 export const ShopContext = createContext();
@@ -6,10 +6,16 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currency = "$";
   const devlivery_fees = 10;
+  const [search, setSearch] = useState(" ");
+  const [showSearch, setShowSearch] = useState(false);
   const value = {
     products,
     currency,
     devlivery_fees,
+    search,
+    setSearch,
+    showSearch,
+    setShowSearch,
   };
 
   return (

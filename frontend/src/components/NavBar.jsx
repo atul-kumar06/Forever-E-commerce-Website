@@ -1,9 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { assets } from "../assets/frontend_assets/assets";
+import { ShopContext } from "../context/ShopContext";
 const NavBar = () => {
+  const { showSearch, setShowSearch, search, setSearch } =
+    useContext(ShopContext);
+
   const [visible, setVisible] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
 
   return (
     <nav className="relative flex items-center justify-between py-4 px-2 sm:px-4 font-medium bg-white my-2">
@@ -46,6 +49,10 @@ const NavBar = () => {
           <input
             type="text"
             placeholder="Search..."
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
             className="bg-transparent outline-none text-sm w-20 lg:w-32 focus:w-48 transition-all duration-300 text-black "
           />
         </div>
@@ -123,6 +130,10 @@ const NavBar = () => {
             type="text"
             placeholder="Search..."
             className="bg-transparent outline-none w-full text-sm text-gray-700"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
           />
           <img
             src={assets.search_icon}
